@@ -1,0 +1,16 @@
+{
+  "dataset_name": "SavannaPay Synthetic SOC Evidence Set",
+  "version": "1.0",
+  "classification": "TRAINING DATA - SYNTHETIC - NO REAL PERSONAL DATA",
+  "timezone": "Event timestamps are UTC (Z). WAT = UTC+01:00.",
+  "scenario_organization": "SavannaPay Microfinance (fictional)",
+  "files": {
+    "common/assets.csv": "Asset and business-context inventory",
+    "common/identities.csv": "Synthetic identity and privilege context",
+    "common/threat_intel_stix.json": "Synthetic STIX 2.1 indicator bundle using reserved example IP/domain ranges",
+    "training/events.jsonl": "Guided-lab evidence",
+    "training/ground_truth.csv": "Labels for model evaluation during guided labs",
+    "capstone/events.jsonl": "Blind capstone evidence; answer key is instructor-only"
+  },
+  "integrity_note": "All indicators use reserved .example domains or documentation IP ranges. Do not treat them as real threat infrastructure."
+}

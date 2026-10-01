@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AICS-112 AI-SOAR Operations Console</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div><span class="kicker">ICDFA PRACTICAL CYBER RANGE</span><h1>AI-SOAR Operations Console</h1><p>SavannaPay Microfinance — synthetic training environment</p></div>
+    <div class="badge" id="health">Connecting…</div>
+  </header>
+  <main>
+    <section class="toolbar panel">
+      <label>Evidence set<select id="dataset"><option value="training">Guided training</option><option value="capstone">Blind capstone</option></select></label>
+      <button id="run">Run SOAR pipeline</button>
+      <button class="secondary" id="audit">Refresh audit</button>
+      <p class="safety">DRY-RUN ONLY — no real endpoint, identity, email or network system can be changed.</p>
+    </section>
+    <section class="metrics" id="metrics"></section>
+    <section class="grid">
+      <div class="panel incidents"><div class="section-title"><h2>Incident queue</h2><span id="count">0 candidates</span></div><div id="incident-list" class="list empty">Run the pipeline to create incidents.</div></div>
+      <div class="panel detail"><div class="section-title"><h2>Investigation</h2><span id="selected">Nothing selected</span></div><div id="incident-detail" class="empty">Select an incident to inspect its evidence and model explanation.</div></div>
+    </section>
+    <section class="grid lower">
+      <div class="panel"><div class="section-title"><h2>AI analyst</h2><span>advisory only</span></div><div id="ai-box" class="empty">Select an incident, then request AI analysis.</div><button id="ask-ai" disabled>Ask AI to analyze</button></div>
+      <div class="panel"><div class="section-title"><h2>Decision & audit</h2><span>human controlled</span></div><div id="actions" class="empty">Approval-gated actions will appear here.</div><div id="audit-log" class="audit-list"></div></div>
+    </section>
+  </main>
+  <footer>AICS-112 • AI-Driven SOAR & Automation • Synthetic classroom application</footer>
+  <script src="/app.js"></script>
+</body>
+</html>

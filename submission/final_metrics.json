@@ -1,0 +1,49 @@
+{
+  "evaluation_unit": "event",
+  "dataset": "training",
+  "method": "incident score propagated to constituent event IDs",
+  "thresholds": [
+    {
+      "threshold": 50,
+      "tp": 8,
+      "fp": 0,
+      "tn": 4,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "threshold": 65,
+      "tp": 8,
+      "fp": 0,
+      "tn": 4,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "threshold": 75,
+      "tp": 8,
+      "fp": 0,
+      "tn": 4,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "threshold": 85,
+      "tp": 8,
+      "fp": 0,
+      "tn": 4,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  ],
+  "capstone_metrics": null,
+  "capstone_reason": "No student ground truth"
+}

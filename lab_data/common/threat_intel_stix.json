@@ -1,0 +1,106 @@
+{
+  "type": "bundle",
+  "id": "bundle--11111111-1111-4111-8111-111111111112",
+  "objects": [
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--00000000-0000-4000-8000-000000000001",
+      "created": "2026-08-01T00:00:00.000Z",
+      "modified": "2026-08-01T00:00:00.000Z",
+      "name": "AICS-112 synthetic domain indicator 1",
+      "pattern": "[domain-name:value = 'secure-docs-auth.example']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-01T00:00:00Z",
+      "valid_until": "2026-12-31T23:59:59Z",
+      "confidence": 92,
+      "labels": [
+        "phishing",
+        "credential-theft"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--00000000-0000-4000-8000-000000000002",
+      "created": "2026-08-01T00:00:00.000Z",
+      "modified": "2026-08-01T00:00:00.000Z",
+      "name": "AICS-112 synthetic ipv4 indicator 2",
+      "pattern": "[ipv4-addr:value = '203.0.113.77']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-01T00:00:00Z",
+      "valid_until": "2026-12-31T23:59:59Z",
+      "confidence": 96,
+      "labels": [
+        "c2",
+        "malware"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--00000000-0000-4000-8000-000000000003",
+      "created": "2026-08-01T00:00:00.000Z",
+      "modified": "2026-08-01T00:00:00.000Z",
+      "name": "AICS-112 synthetic sha256 indicator 3",
+      "pattern": "[file:hashes.'SHA-256' = '9d6f8f67b5f0b6c4fd0f55053f99dbf2c799a32eb7f37dfc9a1d284bcc239b51']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-01T00:00:00Z",
+      "valid_until": "2026-12-31T23:59:59Z",
+      "confidence": 98,
+      "labels": [
+        "malware",
+        "loader"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--00000000-0000-4000-8000-000000000004",
+      "created": "2026-08-01T00:00:00.000Z",
+      "modified": "2026-08-01T00:00:00.000Z",
+      "name": "AICS-112 synthetic domain indicator 4",
+      "pattern": "[domain-name:value = 'cdn-update-check.example']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-01T00:00:00Z",
+      "valid_until": "2026-10-31T23:59:59Z",
+      "confidence": 78,
+      "labels": [
+        "malware-delivery"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--00000000-0000-4000-8000-000000000005",
+      "created": "2026-08-01T00:00:00.000Z",
+      "modified": "2026-08-01T00:00:00.000Z",
+      "name": "AICS-112 synthetic ipv4 indicator 5",
+      "pattern": "[ipv4-addr:value = '198.51.100.44']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-01T00:00:00Z",
+      "valid_until": "2026-12-31T23:59:59Z",
+      "confidence": 85,
+      "labels": [
+        "password-spray"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--00000000-0000-4000-8000-000000000006",
+      "created": "2026-08-01T00:00:00.000Z",
+      "modified": "2026-08-01T00:00:00.000Z",
+      "name": "AICS-112 synthetic domain indicator 6",
+      "pattern": "[domain-name:value = 'telemetry.vendor.example']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-01T00:00:00Z",
+      "valid_until": "2027-12-31T23:59:59Z",
+      "confidence": 5,
+      "labels": [
+        "allowlisted",
+        "benign"
+      ]
+    }
+  ]
+}

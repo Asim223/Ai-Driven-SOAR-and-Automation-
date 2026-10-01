@@ -1,0 +1,9 @@
+user,display_name,department,privileged,risk_tier,normal_country,manager
+amina.bello,Amina Bello,Finance,0,high,NG,musa.ibrahim
+chidi.okafor,Chidi Okafor,People,0,medium,NG,halima.garba
+fatima.sani,Fatima Sani,Operations,0,medium,NG,musa.ibrahim
+wale.admin,Wale Adeyemi,Technology,1,critical,NG,cto.office
+tunde.ade,Tunde Ade,Engineering,0,medium,NG,engineering.lead
+ngozi.eze,Ngozi Eze,Marketing,0,low,NG,marketing.lead
+soc.analyst,SOC Analyst,Security,1,critical,NG,ciso.office
+svc.backup,Backup Service,Technology,1,critical,NG,service.account

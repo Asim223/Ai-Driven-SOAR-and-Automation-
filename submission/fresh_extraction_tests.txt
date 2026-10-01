@@ -1,0 +1,34 @@
+test_append_preserves_existing_bytes_and_hash (test_audit_append.AuditAppendTests.test_append_preserves_existing_bytes_and_hash) ... ok
+test_caller_cannot_supply_hash_fields (test_audit_append.AuditAppendTests.test_caller_cannot_supply_hash_fields) ... ok
+test_tampering_blocks_append_without_rewriting_file (test_audit_append.AuditAppendTests.test_tampering_blocks_append_without_rewriting_file) ... ok
+test_blocked_step_does_not_hide_other_activity (test_capstone_features.CapstoneFeatureTests.test_blocked_step_does_not_hide_other_activity) ... ok
+test_high_severity_process_retains_signal (test_capstone_features.CapstoneFeatureTests.test_high_severity_process_retains_signal) ... ok
+test_prevention_context_reaches_summary (test_capstone_features.CapstoneFeatureTests.test_prevention_context_reaches_summary) ... ok
+test_unrelated_severity_does_not_promote_process (test_capstone_features.CapstoneFeatureTests.test_unrelated_severity_does_not_promote_process) ... ok
+test_ioc_confidence_boundary (test_enrichment_extra.EnrichmentExtraTests.test_ioc_confidence_boundary) ... ok
+test_original_event_unchanged (test_enrichment_extra.EnrichmentExtraTests.test_original_event_unchanged) ... ok
+test_string_privilege_flags (test_enrichment_extra.EnrichmentExtraTests.test_string_privilege_flags) ... ok
+test_unknown_entities_have_defaults (test_enrichment_extra.EnrichmentExtraTests.test_unknown_entities_have_defaults) ... ok
+test_denial_creates_no_simulation (test_idempotency_demo.IdempotencyDemoTests.test_denial_creates_no_simulation) ... ok
+test_replay_after_connection_close_creates_one_record (test_idempotency_demo.IdempotencyDemoTests.test_replay_after_connection_close_creates_one_record) ... ok
+test_critical_without_approval_stays_pending (test_lab6_safety.Lab6SafetyTests.test_critical_without_approval_stays_pending) ... ok
+test_low_confidence_matching_ioc_is_not_trusted (test_lab6_safety.Lab6SafetyTests.test_low_confidence_matching_ioc_is_not_trusted) ... ok
+test_input_preserved_and_fields_normalized (test_normalization_extra.NormalizationExtraTests.test_input_preserved_and_fields_normalized) ... ok
+test_missing_event_id_rejected (test_normalization_extra.NormalizationExtraTests.test_missing_event_id_rejected) ... ok
+test_negative_severity_clamped (test_normalization_extra.NormalizationExtraTests.test_negative_severity_clamped) ... ok
+test_enrichment_adds_context_and_ioc (test_pipeline.PipelineTests.test_enrichment_adds_context_and_ioc) ... ok
+test_hash_chain_detectable (test_pipeline.PipelineTests.test_hash_chain_detectable) ... ok
+test_naive_timestamp_rejected (test_pipeline.PipelineTests.test_naive_timestamp_rejected) ... ok
+test_normalize_timestamp_and_fields (test_pipeline.PipelineTests.test_normalize_timestamp_and_fields) ... ok
+test_prompt_injection_flag (test_pipeline.PipelineTests.test_prompt_injection_flag) ... ok
+test_score_is_explainable (test_pipeline.PipelineTests.test_score_is_explainable) ... ok
+test_severity_boundaries (test_pipeline.PipelineTests.test_severity_boundaries) ... ok
+test_conflicting_decision_rejected (test_scoped_decisions.ScopedDecisionTests.test_conflicting_decision_rejected) ... ok
+test_new_run_has_disjoint_ids_and_rejects_stale_request (test_scoped_decisions.ScopedDecisionTests.test_new_run_has_disjoint_ids_and_rejects_stale_request) ... ok
+test_repeat_returns_same_record_without_append (test_scoped_decisions.ScopedDecisionTests.test_repeat_returns_same_record_without_append) ... ok
+test_replay_rejects_tampered_history (test_scoped_decisions.ScopedDecisionTests.test_replay_rejects_tampered_history) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.040s
+
+OK

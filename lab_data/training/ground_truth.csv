@@ -1,0 +1,13 @@
+event_id,incident_id,is_malicious,rationale
+TR-001,TR-INC-001,1,Part of simulated phishing-to-exfiltration chain
+TR-002,TR-INC-001,1,Part of simulated phishing-to-exfiltration chain
+TR-003,TR-INC-001,1,Part of simulated phishing-to-exfiltration chain
+TR-004,TR-INC-001,1,Part of simulated phishing-to-exfiltration chain
+TR-005,TR-INC-001,1,Part of simulated phishing-to-exfiltration chain
+TR-006,TR-INC-001,1,Part of simulated phishing-to-exfiltration chain
+TR-007,TR-INC-001,1,Part of simulated phishing-to-exfiltration chain
+TR-008,TR-INC-001,1,Part of simulated phishing-to-exfiltration chain
+TR-009,BENIGN,0,Authorized or blocked benign/control activity
+TR-010,BENIGN,0,Authorized or blocked benign/control activity
+TR-011,BENIGN,0,Authorized or blocked benign/control activity
+TR-012,BENIGN,0,Authorized or blocked benign/control activity

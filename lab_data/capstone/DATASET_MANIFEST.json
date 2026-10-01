@@ -1,0 +1,14 @@
+{
+  "dataset_name": "SavannaPay Synthetic SOC Evidence Set",
+  "version": "1.0",
+  "classification": "TRAINING DATA - SYNTHETIC - NO REAL PERSONAL DATA",
+  "timezone": "Event timestamps are UTC (Z). WAT = UTC+01:00.",
+  "scenario_organization": "SavannaPay Microfinance (fictional)",
+  "files": {
+    "events.jsonl": "Blind capstone evidence; no student ground truth",
+    "common/": "Asset, identity and STIX enrichment context"
+  },
+  "integrity_note": "All indicators use reserved .example domains or documentation IP ranges. Do not treat them as real threat infrastructure.",
+  "release": "Week 3 Day 2 only",
+  "install_to": "starter_project/lab_data/capstone"
+}

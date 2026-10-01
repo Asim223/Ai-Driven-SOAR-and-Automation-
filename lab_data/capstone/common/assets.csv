@@ -1,0 +1,13 @@
+asset_id,hostname,type,owner,criticality,environment,business_unit
+AST-001,FIN-LT-044,endpoint,amina.bello,4,production,Finance
+AST-002,HR-LT-018,endpoint,chidi.okafor,3,production,People
+AST-003,OPS-WS-009,endpoint,fatima.sani,3,production,Operations
+AST-004,ADM-PAW-002,privileged_workstation,wale.admin,5,production,Technology
+AST-005,WEB-PRD-01,server,platform.team,5,production,Digital Services
+AST-006,DB-PRD-01,database,data.team,5,production,Digital Services
+AST-007,VULN-SCAN-01,scanner,security.team,3,security,Security
+AST-008,DEV-LT-031,endpoint,tunde.ade,2,development,Engineering
+AST-009,MKT-LT-012,endpoint,ngozi.eze,2,production,Marketing
+AST-010,FILE-PRD-02,server,infrastructure.team,4,production,Technology
+AST-011,SOC-ANL-03,analyst_workstation,soc.analyst,3,security,Security
+AST-012,LAB-VM-112,lab,training.team,1,lab,Learning

@@ -1,0 +1,113 @@
+{
+  "id": "PB-SAVANNAPAY-001",
+  "name": "Critical incident triage and containment approval",
+  "version": "1.0",
+  "owner": "Asim Shayan Khan",
+  "purpose": "Investigate synthetic incidents and simulate controlled response.",
+  "mode": "dry-run-only",
+  "trigger": "A correlated incident is produced by the pipeline.",
+  "inputs": [
+    "incident_id",
+    "risk_score",
+    "event_ids",
+    "entities",
+    "explanation",
+    "planned_actions"
+  ],
+  "preconditions": [
+    "Use synthetic classroom evidence only.",
+    "Resolve users and assets from incident evidence.",
+    "Do not accept entity identifiers invented by the AI.",
+    "Keep every action in dry-run mode."
+  ],
+  "entity_resolution": {
+    "identity": "Use the incident's evidence-backed user identifier.",
+    "endpoint": "Use the incident's evidence-backed asset identifier.",
+    "ambiguity": "Stop containment and request analyst clarification."
+  },
+  "workflow": [
+    {
+      "condition": "all incidents",
+      "action": "create_case"
+    },
+    {
+      "condition": "score >= 40",
+      "action": "notify_analyst"
+    },
+    {
+      "condition": "score >= 65",
+      "action": "collect_endpoint_triage"
+    },
+    {
+      "condition": "score >= 85",
+      "action": "isolate_endpoint",
+      "approval_required": true
+    },
+    {
+      "condition": "score >= 85",
+      "action": "disable_identity",
+      "approval_required": true
+    }
+  ],
+  "approval_design": {
+    "type": "Explicit named human decision for each action",
+    "approver_role": "Authorized classroom analyst or instructor",
+    "pending": "awaiting_approval",
+    "approve": "Record simulated action; no real service is contacted.",
+    "deny": "Record denied; do not perform the action.",
+    "proposed_expiry_minutes": 30,
+    "expiry_behavior": "Require a fresh approval after expiry.",
+    "identity_assurance": "Named text field only; no authentication or role enforcement.",
+    "expiry_status": "Proposed only; no expiry enforced."
+  },
+  "failure_design": {
+    "ambiguous_entity": "Stop and request analyst review.",
+    "invalid_ai_advice": "Reject advice and use verified evidence.",
+    "audit_write_failure": "Stop and preserve the error for review.",
+    "request_timeout": "Check audit records before retrying; the decision may already have been recorded.",
+    "pipeline_write_failure": "Stop review and rerun after investigation; pipeline publication is not atomic across all files."
+  },
+  "idempotency_design": {
+    "implemented_in": "app.record_human_decision",
+    "key": "SHA-256 canonical JSON of playbook_version, run_id, incident_id, entities and action",
+    "persistence": "Verified decisions.jsonl is the decision ledger",
+    "repeat_behavior": "Same decision and analyst returns original record with replayed=true; no append. Opposite decision or changed analyst rejected.",
+    "scope": "Single-process browser/API application and current run; a new run requires a new decision. Standalone CLI is not run-scoped.",
+    "terminal_states": [
+      "simulated",
+      "denied"
+    ],
+    "restart_note": "Decision records persist on disk; legacy incidents without run_id require rerun."
+  },
+  "rollback_design": {
+    "classroom": "No operational rollback needed for dry-run actions.",
+    "future_production": "Separate authorized recovery steps would restore endpoint connectivity or identity access after analyst verification."
+  },
+  "evidence": [
+    "Incident snapshot before decisions",
+    "Named approval and denial responses",
+    "Audit records and timestamps",
+    "Idempotency replay evidence"
+  ],
+  "implementation_status": {
+    "implemented": [
+      "Dry-run plans",
+      "Named simulated approval and denial",
+      "Unique browser run IDs",
+      "Single-entity containment check",
+      "Persistent duplicate decision suppression",
+      "Conflict rejection",
+      "Verify chain before append and replay",
+      "Atomic decision file replacement with in-process lock"
+    ],
+    "not_implemented": [
+      "Authenticated approver roles",
+      "Approval expiry or revocation",
+      "Transactional pipeline output publication",
+      "Production adapters",
+      "Automatic recovery or rollback"
+    ]
+  },
+  "documentation_revision": "1.1",
+  "implementation_version_note": "Application idempotency scope still uses playbook_version 1.0; documentation revision is not a code policy-version change."
+}
